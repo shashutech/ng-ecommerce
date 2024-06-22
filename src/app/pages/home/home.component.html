@@ -1,1 +1,19 @@
-<p>home works!</p>
+<div class="container">
+    <section class="categories-container" *ngIf="categoriesList.length">
+        <h3 class="section-title">Categories</h3>
+        <div class="categories-list-container">
+            <ng-container *ngFor="let category of categoriesList">
+                <app-category [category]="category"></app-category>
+            </ng-container>
+        </div>
+    </section>
+
+    <section class="products-container" *ngIf="productsList.length">
+        <h3 class="section-title">Products</h3>
+        <div class="categories-list-container">
+            <ng-container *ngFor="let product of productsList">
+                <app-product [productDetail]="product"></app-product>
+            </ng-container>
+        </div>
+    </section>
+</div>
