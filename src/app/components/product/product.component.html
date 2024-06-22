@@ -1,0 +1,12 @@
+<ng-container *ngIf="productDetail">
+    <div class="card" style="width: 18rem;">
+        <div class="image-container">
+            <img [ngClass]="['lazyload']" [src]="productDetail.image" class="card-img-top" alt="Product Image">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{productDetail.title | slice: 0 : 10}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a (click)="addProductTOCart(productDetail)" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+</ng-container>

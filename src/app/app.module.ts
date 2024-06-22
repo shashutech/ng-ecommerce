@@ -8,18 +8,31 @@ import { ProductDetailsComponent } from './pages/product-details/product-details
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CategoryComponent } from './components/category/category.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { ProductComponent } from './components/product/product.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProductDetailsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HeaderComponent,
+    FooterComponent,
+    CategoryComponent,
+    ProductComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
